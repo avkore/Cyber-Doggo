@@ -1,29 +1,38 @@
-<!doctype html>  
-   <html>  
-   <head>  
-      <title>avko</title>  
-      <script src="popup.js"></script>  
-      <link rel="stylesheet" href="/CSS/Login.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
-   </head>  
-   <body>
-      <div class="MainContent">
-         <center>
+<!doctype html>
+<html>
+
+<head>
+    <title>Taterix</title>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="MainContent">
+        <center>
             <img src="/Images/MetaMask_Fox.svg.png" alt="">
             <h1>Welcome Back!</h1>
             <h2>The Clean Cyber World awaits</h2><br>
-               <form action="" method="POST">
-                  <div class="formContent">
-                     <input type="email" id="email" name="email" placeholder="Email" required><br>
-                     <input type="password" id="pwd" name="pwd" placeholder="Password" required><br>
-                     <input class="submit" type="submit" value="Log In" input><br>
-                  </div>
-               </form>
-               <a href="">Forgot Password?</a><br>
-               <a href="/HTML/Registrate.html">Dont have an account? Sign up</a><br>
-         </center>
-      </div>
-   </body>  
-</html>  
+            <form action="" method="POST">
+                <div class="formContent">
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+                    <input type="password" id="password" name="pwd" placeholder="Password" required><br>
+                    <button type="button" id="submit" name="submit" class="submit">Log In</button><br>
+                </div>
+            </form>
+            <a href="/HTML/Dashboard.html">Forgot Password?</a><br>
+            <a href="">Dont have an account? Sign up</a><br>
+        </center>
+    </div>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
+<script src="Main.js"></script>
+
+</html>
