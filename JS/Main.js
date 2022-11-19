@@ -40,8 +40,9 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
 
+object.onclick = function(){myScript};
+
 function register() {
-    alert("here");
     nickname = document.getElementById("nickname").value;
     email = document.getElementById("email").value;
     password = document.getElementById("password").value;
@@ -65,6 +66,8 @@ function register() {
             var error_message = error.message;
             alert(error_message);
         })
+
+    window.location.href = "/HTML/Login.html";
 }
 
 // submit.addEventListener('click', (e) => {

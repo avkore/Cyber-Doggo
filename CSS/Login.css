@@ -28,6 +28,7 @@ body img{
 }
 
 .submit{
+    margin-bottom: 15px;
     width: 346px;
     height: 48px;
     background: #0066FF;
@@ -37,10 +38,8 @@ body img{
 }
 
 body a{
-    margin-top: -20px;
-    width: 235px;
+    margin-top: 20px;
     height: 80px;
     font-size: 13.7px;
-    line-height: 248.52%;
     color: #0066FF;
 }
