@@ -12,9 +12,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebas
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail, updatePassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 
-
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyDqsFlsWEmB_Gs6zW60CPJvfRaI12nWKLM",
     authDomain: "doggo-v1.firebaseapp.com",
@@ -70,7 +67,7 @@ function register(auth) {
 }
 const loginBtn = document.getElementById("loginBtn");
 loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     Login();
 })
 
