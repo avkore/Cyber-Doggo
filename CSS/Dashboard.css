@@ -10,7 +10,6 @@ body {
 
 
 body img{
-    margin-top: 20px;
     max-width: 300px;
 }
 
@@ -20,9 +19,40 @@ body img{
     width: 40%;
 }
 
+h3{
+    margin-top: -20px;
+    color: gold;
+    font-size: 30px;
+}
+
 .progeressBars{
-    width: 100px;
-    height: 100px;
+    margin: auto;
+    width: 50%;
+    max-width: 75%;
+}
+
+progress{
+    height: 30px;
+    max-width: 120px;
+}
+
+.progressbar1, .progressbar2, .progeressBar3, .progressbar4{
+    display: flex;
+}
+
+label{
+    max-width: 150px;
+    max-height: 20px;
+}
+
+button{
+    width: 346px;
+    height: 48px;
+    background: #0066FF;
+    color: white;
+    font-size: 19px;
+    border-radius: 55px;
+    margin-top: 20px;
 }
 
 
