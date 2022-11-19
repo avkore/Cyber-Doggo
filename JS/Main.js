@@ -41,12 +41,33 @@ const auth = firebase.auth();
 const database = firebase.database();
 
 function register() {
+    alert("here");
     nickname = document.getElementById("nickname").value;
     email = document.getElementById("email").value;
     password = document.getElementById("password").value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+        .then(function() {
+
+            var user = auth.currentUser // declare user variable
+            var database_ref = database.ref() //add user to firebase database
+            var user_data = {
+                nickname: nickname,
+                email: email,
+                password: password,
+                last_login: Date.now()
+            }
+            database_ref.child('users/' + user.uid).set(user_data); //add user to firebase database
+            alert("User created");
+        })
+        .catch(function(error) {
+            var error_code = error.code;
+            var error_message = error.message;
+            alert(error_message);
+        })
 }
 
-submit.addEventListener('click', (e) => {
-    alert("Hello");
+// submit.addEventListener('click', (e) => {
+//     alert("Hello");
 
-});
+// });

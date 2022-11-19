@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Taterix</title>
+    <title>avko</title>
     <script src="popup.js"></script>
     <link rel="stylesheet" href="/CSS/Login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +14,18 @@
     <div class="MainContent">
         <center>
             <img src="/Images/MetaMask_Fox.svg.png" alt="">
-            <h1>Welcome Back!</h1>
-            <h2>The Clean Cyber World awaits</h2><br>
             <form action="" method="POST">
                 <div class="formContent">
+                    <input type="text" id="nickname" name="nickname" placeholder="Nickname" required><br>
                     <input type="email" id="email" name="email" placeholder="Email" required><br>
                     <input type="password" id="password" name="pwd" placeholder="Password" required><br>
-                    <button type="button" id="submit" name="submit" class="submit">Log In</button><br>
+                    <input type="password" id="Confirmpwd" name="Confirmpwd" placeholder="Confirm Password" required><br>
+                    <button onclick="register()" class="submit" id="registerBtn" input>Register</button><br>
                 </div>
             </form>
-            <a href="/HTML/ForgotPassword.html">Forgot Password?</a><br>
-            <a href="/HTML/Register.html">Dont have an account? Sign up</a><br>
+            <a href="/HTML/Login.html">Already have an account? Log In</a><br>
         </center>
     </div>
-
-
 </body>
 <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
