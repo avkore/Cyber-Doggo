@@ -17,34 +17,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(); // Initialize Firebase Authentication and get a reference to the service
 
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        // alert("User is signed in", user);
-        location.href = "/HTML/Dashboard.html";
-    } else {
-        // alert("User is signed out");
-    }
-})
-
-const loginBtn = document.getElementById("loginBtn");
-loginBtn.addEventListener("click", (e) => {
+const logoutBtn = document.getElementById("logoutBtn");
+logoutBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    Login();
+    Logout();
 })
 
-function Login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            // ...
-            location.href = "/HTML/Dashboard.html";
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-        });
+function Logout() {
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        location.href = "/HTML/Login.html";
+    }).catch((error) => {
+        // An error happened.
+        alert(error);
+    });
 }

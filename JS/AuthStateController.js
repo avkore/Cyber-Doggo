@@ -20,17 +20,21 @@ const auth = getAuth(); // Initialize Firebase Authentication and get a referenc
 onAuthStateChanged(auth, (user) => {
     if (user) {
         // alert("User is signed in", user);
-        location.href = "/HTML/Dashboard.html";
+        // location.href = "/HTML/Dashboard.html";
     } else {
         // alert("User is signed out");
+        location.href = "/HTML/Login.html";
     }
 })
 
-const loginBtn = document.getElementById("loginBtn");
-loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    Login();
-})
+// ---------- Login ----------
+if (document.contains(document.getElementById("loginBtn"))) {
+    const loginBtn = document.getElementById("loginBtn");
+    loginBtn.addEventListener("click", (e) => {
+        // e.preventDefault();
+        Login();
+    })
+}
 
 function Login() {
     const email = document.getElementById("email").value;
@@ -47,4 +51,23 @@ function Login() {
             const errorCode = error.code;
             const errorMessage = error.message;
         });
+}
+
+// ---------- Logout ----------
+if (document.contains(document.getElementById("logoutBtn"))) {
+    const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        Logout();
+    })
+}
+
+function Logout() {
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        location.href = "/HTML/Login.html";
+    }).catch((error) => {
+        // An error happened.
+        alert(error);
+    });
 }
