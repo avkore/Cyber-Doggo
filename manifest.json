@@ -8,6 +8,6 @@
         "default_popup": "HTML/Dashboard.html"
     },
     "permissions": ["activeTab, tabs"],
-    "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js https://www.googleapis.com/ https://*.firebaseio.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js https://www.googleapis.com/ https://*.firebaseio.com; object-src 'self'"
 
 }
