@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail, updatePassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -16,6 +17,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(); // Initialize Firebase Authentication and get a reference to the service
+const db = getDatabase(); // Initialize Firebase Database and get a reference to the service
 
 const registerBtn = document.getElementById("registerBtn");
 registerBtn.addEventListener("click", (e) => {
@@ -34,23 +36,21 @@ function Register(auth) {
     console.log("password: " + password);
     createUserWithEmailAndPassword(auth, email, password)
         .then(function() {
-            //
-            // var user = auth.currentUser // declare user variable
-            // var database_ref = database.ref() //add user to firebase database
-            // var user_data = {
-            //     nickname: nickname,
-            //     email: email,
-            //     password: password,
-            //     last_login: Date.now()
-            // }
-            // database_ref.child('users/' + user.uid).set(user_data); //add user to firebase database
-            location.href = "/HTML/Login.html";
+            var user = auth.currentUser // declare user variable
+
+            set(ref(db, "doggo/users/" + user.uid), {
+                    nickname: nickname,
+                    email: email,
+                    reportedUrls: {}
+                    //TODO: Add scoring system
+                }).then(function() {
+                    location.href = "/HTML/Login.html";
+                })
+                .catch(function(error) {
+                    var error_code = error.code;
+                    var error_message = error.message;
+                    alert(error_message);
+                })
 
         })
-        .catch(function(error) {
-            var error_code = error.code;
-            var error_message = error.message;
-            alert(error_message);
-        })
-
 }
