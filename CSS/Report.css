@@ -37,7 +37,7 @@ body img{
     border-bottom: 2px solid #000000;
 }
 
-.report{
+button{
     width: 346px;
     height: 48px;
     background: #0066FF;
@@ -47,12 +47,10 @@ body img{
     margin-top: 20px;
 }
 
-body a{
-    margin-top: 20px;
-    height: 80px;
-    font-size: 13.7px;
-    color: #0066FF;
+button:hover{
+    cursor: pointer;
 }
+
 
 body ul{
     list-style-type: none;
