@@ -3,14 +3,14 @@
 
 <head>
     <title>avko</title>
-    <script src="/JS/Main.js"></script>
-    <link rel="stylesheet" href="/CSS/Register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/Register.css">
 </head>
 
 <body>
+    <div id="registerPage"></div>
     <div class="MainContent">
         <center>
             <img src="/Images/MetaMask_Fox.svg.png" alt="">
@@ -20,15 +20,16 @@
                     <input type="email" id="email" name="email" placeholder="Email" required><br>
                     <input type="password" id="password" name="pwd" placeholder="Password" required><br>
                     <input type="password" id="Confirmpwd" name="Confirmpwd" placeholder="Confirm Password" required><br>
-                    <button onclick="register()" class="submit" id="registerBtn">Register</button><br>
+                    <button class="submit" id="registerBtn">Register</button><br>
                 </form>
             </div>
             <a href="/HTML/Login.html">Already have an account? Log In</a><br>
         </center>
     </div>
 </body>
-<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>-->
+<!--<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js"></script>-->
+<!--<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>-->
+<script src="/JS/Main.js" type="module"></script>
 
 </html>
