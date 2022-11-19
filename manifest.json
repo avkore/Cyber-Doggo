@@ -5,7 +5,7 @@
     "version": "1.0",  
     "browser_action": {  
         "default_icon": "Images/Doodler.png",  
-        "default_popup": "HTML/Login.html"  
+        "default_popup": "HTML/Dashboard.html"  
     },  
     "permissions": ["activeTab"]  
 }  
