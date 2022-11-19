@@ -20,6 +20,11 @@ body img{
     width: 40%;
 }
 
+.progeressBars{
+    width: 100px;
+    height: 100px;
+}
+
 
 footer ul{
     margin-top: 25px;
