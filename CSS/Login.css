@@ -37,6 +37,10 @@ body img{
     border-radius: 55px;
 }
 
+.submit:hover{
+    cursor: pointer;
+}
+
 body a{
     margin-top: 20px;
     height: 80px;

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/CSS/Dashboard.css">
+    <link rel="stylesheet" href="/CSS/Profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
@@ -17,11 +17,29 @@
     <div class="MainContent">
         <center>
             <img src="/Images/MetaMask_Fox.svg.png" alt="">
+            <p class="lvl">LVL1 DOGGO</p>
             <h3>568</h3>
-            <button name="logout" id="logoutBtn">log Out</button>
+            <div class="content">
+                <div class="Texts">
+                    <p>name: </p>
+                    <p>Mail: </p>
+                    <p>Password: </p>
+                </div>
+                <div class="Inputs">
+                    <input name="name" id="name" type="text" placeholder="avko"><br>
+                    <input name="mail" id="mail" type="email" placeholder="Dachi.Avkopashvili.1@btu.edu.ge">
+                    <input name="password" id="password" type="password" placeholder="•••••••">
+                </div>       
+            </div>
+            
+            <a href="/HTML/Dashboard.html"><button type="button" id="save" name="save" class="save">Save Changes</button></a>
+            <a id="logoutBtn" name="logout" class="logout">Log Out</a>
         </center>
     </div>
 </body>
+
+
+
 <script src="/JS/Profile.js" type="module"></script>
 <!-- <script src="/JS/AuthStateController.js" type="module"></script> -->
 

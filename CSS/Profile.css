@@ -1,0 +1,88 @@
+body {
+    width: 400px;
+    height: 600px;
+    font-family: 'Lekton', sans-serif;
+    margin:0 auto;
+}
+
+
+body img{
+    margin-top: 30px;
+    max-width: 300px;
+}
+
+.MainContent img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.lvl{
+    margin-top: -20px;
+}
+
+h3{
+    margin-top: -5px;
+    color: gold;
+    font-size: 40px;
+}
+
+.content{
+    margin-top: -50px;
+    display: flex;
+}
+
+.Texts{
+    margin-left: 25px;
+}
+
+.Texts p{
+    font-size: 15px;
+}
+
+input{
+    margin-top: 5px;
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000000;
+}
+
+a{
+    color: blue;
+    cursor: pointer;
+}
+
+button{
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 346px;
+    height: 48px;
+    background: #0066FF;
+    color: white;
+    font-size: 19px;
+    border-radius: 55px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+footer{
+    margin-top: -20px;
+    float: bottom;
+}
+
+footer ul{
+    display: flex;
+    gap: 15%;
+    list-style-type: none;
+}
+
+ul img{
+    width: 40px;
+    height: 40px;
+}
