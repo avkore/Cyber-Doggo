@@ -32,7 +32,7 @@ function Login() {
             // Signed in
             const user = userCredential.user;
             // ...
-            alert("User logged in")
+            location.href = "/HTML/Dashboard.html";
         })
         .catch((error) => {
             const errorCode = error.code;

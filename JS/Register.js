@@ -44,7 +44,7 @@ function Register(auth) {
             //     last_login: Date.now()
             // }
             // database_ref.child('users/' + user.uid).set(user_data); //add user to firebase database
-            alert("User created");
+            location.href = "/HTML/Login.html";
 
         })
         .catch(function(error) {
