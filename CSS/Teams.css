@@ -1,0 +1,62 @@
+body {
+    width: 400px;
+    height: 600px;
+    font-family: 'Lekton', sans-serif;
+    margin:0 auto;
+}
+
+
+body img{
+    margin-top: 30px;
+    max-width: 300px;
+}
+
+.MainContent img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.lvl{
+    margin-top: -20px;
+}
+
+h3{
+    margin-top: -5px;
+    color: gold;
+    font-size: 40px;
+}
+
+.teamBtns{
+    margin-top: -15px;
+}
+
+button{
+    width: 346px;
+    height: 48px;
+    background: #0066FF;
+    color: white;
+    font-size: 19px;
+    border-radius: 55px;
+    margin-top: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 66px;
+}
+
+footer ul{
+    display: flex;
+    gap: 15%;
+    list-style-type: none;
+    float: bottom;
+}
+
+ul img{
+    width: 40px;
+    height: 40px;
+}
