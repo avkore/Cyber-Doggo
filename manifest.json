@@ -1,11 +1,13 @@
-{  
-    "manifest_version": 2,  
-    "name": "Cyber Doggo",  
-    "description": "This extension is designed to win some money",  
-    "version": "1.0",  
-    "browser_action": {  
-        "default_icon": "Images/Doodler.png",  
-        "default_popup": "HTML/Login.html"  
-    },  
-    "permissions": ["activeTab"]  
-}  
+{
+    "manifest_version": 2,
+    "name": "Cyber Doggo",
+    "description": "This extension is designed to win some money",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "Images/Doodler.png",
+        "default_popup": "HTML/Login.html"
+    },
+    "permissions": ["activeTab"],
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js https://www.googleapis.com/ https://*.firebaseio.com; object-src 'self'"
+
+}
