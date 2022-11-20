@@ -2,10 +2,9 @@
 // const { getDatabase, ref, child, get } = require("https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js");
 chrome.webNavigation.onCompleted.addListener(function(tab) {
     if (tab.frameId == 0) { // Making sure it runs only once
-        console.log("This is my favorite website!");
-        alert("This is my favorite website!");
+        chrome.tabs.update({url: "/HTML/WarningPopup.html"});
 
-    }
+    } 
 
 
     // chrome.tabs.create({ url: "/HTML/WarningPopup.html" });
@@ -34,8 +33,7 @@ chrome.webNavigation.onCompleted.addListener(function(tab) {
     //     "credentials": "omit"
     //   });
 
-});
-
+}, {url: [{urlMatches : 'https://www.facebook.com/'}]});
 
 
 
