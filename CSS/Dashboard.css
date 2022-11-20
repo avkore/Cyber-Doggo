@@ -3,43 +3,43 @@ body {
     height: 600px;
     font-family: 'Lekton', sans-serif;
     overflow-y: hidden;
-    margin:0 auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
-body img{
+body img {
     margin-top: 30px;
     max-width: 300px;
 }
 
-.MainContent img{
+.MainContent img {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
 }
 
-.lvl{
+.lvl {
     margin-top: -20px;
 }
 
-h3{
+h3 {
     margin-top: -5px;
     color: gold;
     font-size: 40px;
 }
 
-.missionsdiv{
+.missionsdiv {
     margin-top: -25px;
     font-size: 15px;
     display: flex;
 }
 
-.missions{
+.missions {
     max-width: 350px;
     text-align: left;
 }
 
-.points ul{
+.points ul {
     margin-top: 23px;
     list-style-type: none;
     margin-right: 10px;
@@ -47,7 +47,7 @@ h3{
     line-height: 70%;
 }
 
-button{
+button {
     width: 346px;
     height: 48px;
     background: #0066FF;
@@ -57,31 +57,31 @@ button{
     margin-top: 20px;
 }
 
-button :hover{
+button :hover {
     cursor: pointer;
 }
 
-footer{
+footer {
     float: bottom;
 }
 
-footer ul{
+footer ul {
     float: bottom;
     display: flex;
     gap: 15%;
     list-style-type: none;
 }
 
-ul img{
+ul img {
     width: 40px;
     height: 40px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-a :hover{
+a :hover {
     cursor: pointer;
 }
