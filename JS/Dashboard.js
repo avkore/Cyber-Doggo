@@ -17,27 +17,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(); // Initialize Firebase Authentication and get a reference to the service
 const db = getDatabase(); // Initialize Firebase Database and get a reference to the service
 
-const testDbBtn = document.getElementById("testDbBtn");
-testDbBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    fetchBannedUrls();
-})
+// const testDbBtn = document.getElementById("testDbBtn");
+// testDbBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
 
-
-
-
-function fetchBannedUrls() {
-    const dbRef = ref(db);
-    get(child(dbRef, `/doggo/bannedUrls`)).then((snapshot) => {
-        if (snapshot.exists()) {
-            var data = snapshot.val();
-            for (let i in data) {
-                alert(data[i]);
-            }
-        } else {
-            alert("No data available");
-        }
-    }).catch((error) => {
-        alert(error);
-    });
-}
+// })

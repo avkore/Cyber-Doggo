@@ -1,8 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail, updatePassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { getDatabase, ref, set, push, child, get, onValue } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
-// import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
-// const { getDatabase, ref, child, get } = require("https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js");
 
 const firebaseConfig = {
     apiKey: "AIzaSyDqsFlsWEmB_Gs6zW60CPJvfRaI12nWKLM",
@@ -19,10 +17,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(); // Initialize Firebase Authentication and get a reference to the service
 const db = getDatabase(); // Initialize Firebase Database and get a reference to the service
 
-chrome.webNavigation.onCompleted.addListener(function(tab) {
-    if (tab.frameId == 0) { // Making sure it runs only once
-        // chrome.tabs.update({ url: "/HTML/WarningPopup.html" });
-        alert(auth.currentUser.uid);
+chrome.webNavigation.onCommitted.addListener(function(tab) {
+    if (tab.frameId == 0) { // Making sure it runs only onc
+        checkCurrentUrl(tab.url);
     }
 
 
@@ -52,8 +49,25 @@ chrome.webNavigation.onCompleted.addListener(function(tab) {
     //     "credentials": "omit"
     //   });
 
-}, { url: [{ urlMatches: 'https://www.facebook.com/' }] });
+});
 
+function checkCurrentUrl(currentUrl) {
+    const dbRef = ref(db);
+    get(child(dbRef, `/doggo/bannedUrls`)).then((snapshot) => {
+        if (snapshot.exists()) {
+            var data = snapshot.val();
+            for (let i in data) {
+                if (currentUrl.includes(data[i])) {
+                    chrome.tabs.update({ url: "/HTML/WarningPopup.html" });
+                }
+            }
+        } else {
+            alert("No data available");
+        }
+    }).catch((error) => {
+        alert(error);
+    });
+}
 
 
 
