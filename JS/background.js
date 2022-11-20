@@ -1,6 +1,6 @@
 chrome.webNavigation.onCompleted.addListener(function() {
     alert("This is my favorite website!");
-    // chrome.tabs.create({ url: "/HTML/WarningPopup.html" });
+    chrome.tabs.create({ url: "/HTML/WarningPopup.html" });
 }, { url: [{ urlMatches: 'https://www.facebook.com/' }] });
 console.log("background.js loaded");
 
