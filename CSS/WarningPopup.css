@@ -1,11 +1,38 @@
 body {
-    background-color: black;
-    height: 100%;
-    width: 100%;
+    overflow-y: hidden;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.MainContent {
-    background-color: black;
-    height: 100%;
+.MainContent{
+    display: flex;
     width: 100%;
+    position: fixed;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.MainContent img{
+    margin-left: 50px;
+}
+
+h4{
+    font-size: 40px;
+}
+
+
+.Texts{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: Lekton;
+}
+
+button{
+    width: 150px;
+    cursor: pointer;
+    height: 48px;
+    background: #0066FF;
+    color: white;
+    font-size: 19px;
+    border-radius: 12px;
 }
