@@ -1,9 +1,28 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail, updatePassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+import { getDatabase, ref, set, push, child, get, onValue } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
 // import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
 // const { getDatabase, ref, child, get } = require("https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js");
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDqsFlsWEmB_Gs6zW60CPJvfRaI12nWKLM",
+    authDomain: "doggo-v1.firebaseapp.com",
+    databaseURL: "https://doggo-v1-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "doggo-v1",
+    storageBucket: "doggo-v1.appspot.com",
+    messagingSenderId: "686895259242",
+    appId: "1:686895259242:web:ab10716f058dcaebd0f413",
+    measurementId: "G-MH1K6RHX18"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(); // Initialize Firebase Authentication and get a reference to the service
+const db = getDatabase(); // Initialize Firebase Database and get a reference to the service
+
 chrome.webNavigation.onCompleted.addListener(function(tab) {
     if (tab.frameId == 0) { // Making sure it runs only once
-        chrome.tabs.update({ url: "/HTML/WarningPopup.html" });
-
+        // chrome.tabs.update({ url: "/HTML/WarningPopup.html" });
+        alert(auth.currentUser.uid);
     }
 
 

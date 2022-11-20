@@ -2,8 +2,7 @@
     "manifest_version": 2,
     "name": "Cyber Doggo",
     "background": {
-        "scripts": ["/JS/background.js"],
-        "persistent": false
+        "page": "/HTML/background.html"
     },
     "description": "This extension is designed to win some money",
     "version": "1.0",
