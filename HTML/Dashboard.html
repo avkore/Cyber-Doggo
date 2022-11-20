@@ -47,7 +47,7 @@
                 function onMouseMove(event) {
                     console.log("1111");
                     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-                    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+                    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
                     raycaster.setFromCamera(mouse, camera);
                     raycaster.ray.intersectPlane(plane, pointOfIntersection);
                     box.lookAt(pointOfIntersection);
@@ -71,8 +71,6 @@
                     }
                     return needResize;
                 }
-
-
             </script>
             <p class="lvl">LVL1 DOGGO</p>
             <h3>568</h3>
@@ -108,8 +106,9 @@
     </div>
 </body>
 
-<!-- <script></script> -->
+<script src="/JS/Dashboard.js" type="module"></script>
 <script src="/JS/AuthStateController.js" type="module"></script>
+
 <footer>
     <ul>
         <li>
