@@ -9,7 +9,7 @@
     "description": "This extension is designed to win some money",
     "version": "1.0",
     "browser_action": {
-        "default_icon": "Images/Doodler.png",
+        "default_icon": "Images/Logo_v2.png",
         "default_popup": "HTML/Dashboard.html"
     },
     "permissions": ["activeTab", "tabs", "webNavigation"],
