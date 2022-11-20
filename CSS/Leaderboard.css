@@ -1,0 +1,48 @@
+body {
+    width: 400px;
+    height: 600px;
+    font-family: 'Lekton', sans-serif;
+    margin:0 auto;
+}
+
+.Maincontent{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.roundedList ul{
+    margin-top: -55px;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 10%;
+}
+
+.roundedList ul img:not(#crown){
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+.crown{
+    margin-left: -23px;
+    margin-top: 50px;
+    width: 15px;
+    height: 15px;
+}
+
+.second, .third{
+    margin-top: 100px;
+}
+
+footer ul{
+    display: flex;
+    gap: 15%;
+    list-style-type: none;
+    float: bottom;
+}
+
+ul img{
+    width: 40px;
+    height: 40px;
+}
