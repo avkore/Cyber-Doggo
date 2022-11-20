@@ -3,6 +3,7 @@
     "name": "Cyber Doggo",
     "background": {
         "scripts": ["/JS/background.js"],
+        "type": "module",
         "persistent": false
     },
     "description": "This extension is designed to win some money",
