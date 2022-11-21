@@ -1,9 +1,13 @@
+* {
+    overflow: hidden;
+}
+
 body {
     width: 400px;
     height: 600px;
     font-family: 'Lekton', sans-serif;
     margin:0 auto;
-    background-color: grey;
+    background-color: rgb(255, 153, 0);
 }
 
 .MainContent {
@@ -26,6 +30,9 @@ body {
     transition: all 0.5s ease-out;
 }
 
+.lvl{
+    color: white;
+}
 
 h3{
     margin-top: -5px;
@@ -40,11 +47,13 @@ h3{
 button{
     width: 346px;
     height: 48px;
-    background: #0066FF;
-    color: white;
+    background: white;
+    border: 3px solid white;
     font-size: 19px;
     border-radius: 55px;
-    margin-top: 20px;
+    background-color: rgb(255, 153, 0);
+    color: white;
+    margin-top: 10px;
 }
 
 button:hover{
