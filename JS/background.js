@@ -58,6 +58,7 @@ function checkCurrentUrl(currentUrl) {
             var data = snapshot.val();
             for (let i in data) {
                 var entry = data[i];
+                console.log(entry);
                 var domain = getDomainFromUrl(currentUrl);
 
                 if (domain.includes(entry)) {

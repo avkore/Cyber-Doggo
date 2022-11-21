@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail, updatePassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-
+import { getDatabase, ref, set, child, push, update } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDqsFlsWEmB_Gs6zW60CPJvfRaI12nWKLM",
@@ -15,7 +15,36 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getDatabase();
 const auth = getAuth(); // Initialize Firebase Authentication and get a reference to the service
+
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+const passwordInput = document.getElementById("passwordInput");
+
+// const dbRef = ref(db);
+// get(child(dbRef, `/doggo/bannedUrls`)).then((snapshot) => {
+//     if (snapshot.exists()) {
+//         var data = snapshot.val();
+//         for (let i in data) {
+//             var entry = data[i];
+//             var domain = getDomainFromUrl(currentUrl);
+
+//             if (domain.includes(entry)) {
+//                 chrome.tabs.update({ url: "/HTML/WarningPopup.html?" + currentUrl });
+//             }
+//         }
+//     } else {
+//         alert("No data available");
+//     }
+// }).catch((error) => {
+//     alert(error);
+// });
+
+
+
+
+
 
 const logoutBtn = document.getElementById("logoutBtn");
 logoutBtn.addEventListener("click", (e) => {
