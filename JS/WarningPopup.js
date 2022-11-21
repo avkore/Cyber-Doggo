@@ -17,21 +17,29 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 const auth = getAuth();
 var blockedUrl;
-chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    blockedUrl = tabs[0].url;
-    blockedUrl.split("?")[1].split("w.")[1].split("/")[0]
-});
 
 
 const continueBtn = document.getElementById("continueBtn");
 continueBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    chrome.tabs.update({ url: blockedUrl });
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        blockedUrl = tabs[0].url;
+        blockedUrl = blockedUrl.split("?")[1];
+        blockedUrl = blockedUrl.split("://")[1];
+        blockedUrl = blockedUrl.split("/")[0];
+    });
+    // chrome.tabs.update({ url: blockedUrl });
 })
 
 const reportBtn = document.getElementById("reportBtn");
 reportBtn.addEventListener("click", (e) => {
     e.preventDefault();
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        blockedUrl = tabs[0].url;
+        blockedUrl = blockedUrl.split("?")[1];
+        blockedUrl = blockedUrl.split("://")[1];
+        blockedUrl = blockedUrl.split("/")[0];
+    });
     ReportWebsite(blockedUrl).then(alert("Reported! Page will now close.")).then(window.close());
 })
 
@@ -64,8 +72,8 @@ function ReportWebsite(repUrl) {
 
 
 
-var deniedUrl = window.location.href.split("?")[1];
-var virustotalLinkTemplate = "https://www.virustotal.com/ui/search?limit=20&relationships%5Bcomment%5D=author%2Citem&query=";
+// var deniedUrl = window.location.href.split("?")[1];
+// var virustotalLinkTemplate = "https://www.virustotal.com/ui/search?limit=20&relationships%5Bcomment%5D=author%2Citem&query=";
 
 // alert("NOT ALLOWED: " + deniedUrl)
 
