@@ -36,16 +36,16 @@ h3{
     font-size: 40px;
 }
 
-.content{
+.content {
     margin-top: -50px;
     display: flex;
 }
 
-.Texts{
+.Texts {
     margin-left: 25px;
 }
 
-.Texts p{
+.Texts p {
     font-size: 15px;
     color: white;
 }
@@ -65,12 +65,12 @@ input::placeholder{
     color: darkgray;
 }
 
-a{
+a {
     color: blue;
     cursor: pointer;
 }
 
-button{
+button {
     margin-left: 30px;
     margin-right: 10px;
     margin-bottom: 20px;
@@ -84,6 +84,6 @@ button{
     border-radius: 55px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }

@@ -40,11 +40,11 @@ h3{
     font-size: 40px;
 }
 
-.teamBtns{
+.teamBtns {
     margin-top: -15px;
 }
 
-button{
+button {
     width: 346px;
     height: 48px;
     background: white;
@@ -56,6 +56,6 @@ button{
     margin-top: 10px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
