@@ -7,13 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/Register.css">
     <title>Doggo v1.0</title>
+    <!-- THREE.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 
 <body>
     <div id="registerPage"></div>
     <div class="MainContent">
         <center>
-            <img src="/Images/MetaMask_Fox.svg.png" alt="">
+            <div id="doggoContainer" class="headModelContent"></div>
             <div class="formContent">
                 <form action="" method="post">
                     <input type="text" id="nickname" name="nickname" placeholder="Nickname" required><br>
@@ -32,5 +35,7 @@
 <!--<script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>-->
 <script src="/JS/Register.js" type="module"></script>
 <!-- <script src="/JS/AuthStateController.js" type="module"></script> -->
+<script src="/JS/LoadEssentials.js" type="module"></script>
+<script src="/JS/Dashboard.js" type="module"></script>
 
 </html>

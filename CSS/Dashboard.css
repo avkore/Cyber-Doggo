@@ -6,22 +6,6 @@ body {
     background-color: grey;
 }
 
-model-viewer {
-    width: 100%;
-    height: 160px;
-    margin-top: 20px;
-}
-
-h3 {
-    margin-top: -15px;
-    color: white;
-    font-size: 40px;
-}
-
-canvas {
-    margin-top: -30px;
-}
-
 .MainContent {
     overflow-y: hidden;
     /* border-radius: 30px; */
@@ -53,8 +37,11 @@ canvas {
     transition: all 0.5s ease-out;
 }
 
-.lvl {
-    margin-top: -10px;
+
+h3 {
+    margin-top: -15px;
+    color: Gold;
+    font-size: 40px;
 }
 
 .missionsdiv {
