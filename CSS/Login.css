@@ -27,6 +27,7 @@ body {
 }
 
 .MainContent input{
+    margin-top: -10px;
     width: 346px;
     height: 40px;
     outline: none;
