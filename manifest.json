@@ -4,12 +4,18 @@
     "background": {
         "page": "/HTML/background.html"
     },
-    "description": "This extension is designed to win some money",
+    "description": "This extension is designed to help comunity clean cyber world.",
     "version": "1.0",
     "browser_action": {
         "default_icon": "Images/Logo_v2.png",
         "default_popup": "HTML/Dashboard.html"
     },
+    "icons": {
+        "16": "Images/Logo_v2.png",
+        "32": "Images/Logo_v2.png",
+        "48": "Images/Logo_v2.png",
+        "128": "Images/Logo_v2.png"
+      },
     "permissions": ["activeTab", "tabs", "webNavigation"],
     "content_security_policy": "script-src 'self' https://code.jquery.com/jquery-1.10.2.js https://cdn.jsdelivr.net/gh/mrdoob/three.js@master/examples/js/loaders/GLTFLoader.js https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js https://www.googleapis.com/ https://*.firebaseio.com; object-src 'self'"
 
