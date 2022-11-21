@@ -3,11 +3,29 @@ body {
     height: 600px;
     font-family: 'Lekton', sans-serif;
     margin:0 auto;
+    background-color: grey;
 }
 
-.lvl{
-    margin-top: -20px;
+.MainContent {
+    overflow-y: hidden;
+    /* border-radius: 30px; */
+    /* background-color: gray; */
 }
+
+.headModelContent {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 10px 0 10px 0;
+}
+
+#doggoContainer {
+    transform-origin: 50% 50% 150px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
+}
+
 
 h3{
     margin-top: -5px;
