@@ -57,8 +57,11 @@ function checkCurrentUrl(currentUrl) {
         if (snapshot.exists()) {
             var data = snapshot.val();
             for (let i in data) {
-                if (currentUrl.includes(data[i])) {
-                    chrome.tabs.update({ url: "/HTML/WarningPopup.html" });
+                var entry = data[i];
+                var domain = getDomainFromUrl(currentUrl);
+
+                if (domain.includes(entry)) {
+                    chrome.tabs.update({ url: "/HTML/WarningPopup.html?" + currentUrl });
                 }
             }
         } else {
@@ -67,6 +70,17 @@ function checkCurrentUrl(currentUrl) {
     }).catch((error) => {
         alert(error);
     });
+}
+
+function getDomainFromUrl (url) {
+    var afterHttp = url.split("://")[1];
+    var result = afterHttp;
+    
+    if (afterHttp.includes("/")) {
+        result = afterHttp.split("/")[0]
+    }
+
+    return result;
 }
 
 
