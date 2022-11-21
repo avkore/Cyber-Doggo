@@ -19,3 +19,7 @@ ul img {
     width: 40px;
     height: 40px;
 }
+
+canvas {
+    margin-top: -20px;
+}

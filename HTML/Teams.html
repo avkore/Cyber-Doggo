@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/CSS/Teams.css">
     <link rel="stylesheet" href="/CSS/Header.css">
+    <link rel="stylesheet" href="/CSS/Waves.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet">
@@ -15,19 +17,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 </head>
+
 <body>
-<div class="MainContent">
-    <center>
-        <div id="doggoContainer" class="headModelContent">
-        </div>
-        <p class="lvl">LVL1 DOGGO</p>
-        <h3>568</h3>
-       <div class="teamBtns">
-            <button type="button" id="createBtn" name="create" class="create">Create Your Team</button><br>
-            <button type="button" id="joinBtn" name="join" class="join">Join Existing Team</button><br>
-       </div>
-    </center>
-</div>
+    <div class="MainContent">
+        <center>
+            <div id="doggoContainer" class="headModelContent">
+            </div>
+            <p class="lvl">LVL1 DOGGO</p>
+            <h3>568</h3>
+            <div class="teamBtns">
+                <button type="button" id="createBtn" name="create" class="create">Create Your Team</button><br>
+                <button type="button" id="joinBtn" name="join" class="join">Join Existing Team</button><br>
+            </div>
+        </center>
+    </div>
+    <div id="waveWrapper"></div>
 </body>
 
 <script src="/JS/LoadEssentials.js" type="module"></script>

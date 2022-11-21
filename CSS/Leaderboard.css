@@ -2,15 +2,16 @@ body {
     width: 400px;
     height: 600px;
     font-family: 'Lekton', sans-serif;
-    margin:0 auto;
+    margin: 0 auto;
+    background-color: rgb(255, 153, 0);
 }
 
-.Maincontent{
+.Maincontent {
     width: 50%;
     margin: 0 auto;
 }
 
-.roundedList ul{
+.roundedList ul {
     margin-top: -55px;
     display: flex;
     list-style-type: none;
@@ -18,19 +19,20 @@ body {
     gap: 10%;
 }
 
-.roundedList ul img:not(#crown){
+.roundedList ul img:not(#crown) {
     border-radius: 50%;
     width: 75px;
     height: 75px;
 }
 
-.crown{
+.crown {
     margin-left: -23px;
     margin-top: 50px;
     width: 15px;
     height: 15px;
 }
 
-.second, .third{
+.second,
+.third {
     margin-top: 100px;
 }
