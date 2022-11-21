@@ -72,10 +72,10 @@ function checkCurrentUrl(currentUrl) {
     });
 }
 
-function getDomainFromUrl (url) {
+function getDomainFromUrl(url) {
     var afterHttp = url.split("://")[1];
     var result = afterHttp;
-    
+
     if (afterHttp.includes("/")) {
         result = afterHttp.split("/")[0]
     }

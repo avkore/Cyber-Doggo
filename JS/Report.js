@@ -27,17 +27,15 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
 const reportBtn = document.getElementById("reportBtn");
 reportBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    ReportWebsite();
+    const reportUrl = document.getElementById("reportUrl").value;
+    ReportWebsite(reportUrl);
 
 })
 
-function ReportWebsite() {
+function ReportWebsite(repUrl) {
     const user = auth.currentUser;
-    const reportUrl = document.getElementById("reportUrl").value;
-
-
     const postData = {
-        url: reportUrl,
+        url: repUrl,
         approved: false
     };
 
@@ -46,23 +44,4 @@ function ReportWebsite() {
     updates["doggo/users/" + user.uid + "/reports/" + newPostKey] = postData;
 
     return update(ref(db), updates);
-
-
-
-
-
-    // if (user) {
-    //     set(ref(db, "doggo/users/" + user.uid), {
-    //         url: currentUrl
-    //     });
-
-    // } else {
-    //     alert("There was a problem with submitting your report, please try again")
-    // }
-
-
-
-    // chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
-    //     document.getElementById("reportUrl").value = "example.com";
-    // });
 }
