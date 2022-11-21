@@ -1,3 +1,69 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+import { getDatabase, ref, set, child, push, update } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+import { getAuth, onAuthStateChanged, } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDqsFlsWEmB_Gs6zW60CPJvfRaI12nWKLM",
+    authDomain: "doggo-v1.firebaseapp.com",
+    databaseURL: "https://doggo-v1-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "doggo-v1",
+    storageBucket: "doggo-v1.appspot.com",
+    messagingSenderId: "686895259242",
+    appId: "1:686895259242:web:ab10716f058dcaebd0f413",
+    measurementId: "G-MH1K6RHX18"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase();
+const auth = getAuth();
+var blockedUrl;
+chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    blockedUrl = tabs[0].url;
+    blockedUrl.split("?")[1].split("w.")[1].split("/")[0]
+});
+
+
+const continueBtn = document.getElementById("continueBtn");
+continueBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    chrome.tabs.update({ url: blockedUrl });
+})
+
+const reportBtn = document.getElementById("reportBtn");
+reportBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    ReportWebsite(blockedUrl).then(alert("Reported! Page will now close.")).then(window.close());
+})
+
+function ReportWebsite(repUrl) {
+    const user = auth.currentUser;
+    const postData = {
+        url: repUrl,
+        approved: false
+    };
+
+    const newPostKey = push(child(ref(db), 'reportedUrls')).key;
+    const updates = {};
+    updates["doggo/users/" + user.uid + "/reports/" + newPostKey] = postData;
+
+    return update(ref(db), updates);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var deniedUrl = window.location.href.split("?")[1];
 var virustotalLinkTemplate = "https://www.virustotal.com/ui/search?limit=20&relationships%5Bcomment%5D=author%2Citem&query=";
 
