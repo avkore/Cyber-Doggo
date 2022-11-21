@@ -1,12 +1,7 @@
-/* * {
-    overflow: hidden;
-} */
-
 body {
     width: 400px;
     height: 600px;
     font-family: 'Lekton', sans-serif;
-    overflow-y: hidden;
     margin: 0 auto;
     background-color: grey;
 }
@@ -28,7 +23,7 @@ canvas {
 }
 
 .MainContent {
-    overflow: hidden;
+    overflow-y: hidden;
     /* border-radius: 30px; */
     /* background-color: gray; */
 }
@@ -100,28 +95,6 @@ button {
 
 button :hover {
     cursor: pointer;
-}
-
-footer {
-    /* margin: 10px 30px; */
-    /* padding: 0px; */
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    background-color: white;
-}
-
-footer ul {
-    float: bottom;
-    display: flex;
-    gap: 15%;
-    list-style-type: none;
-}
-
-ul img {
-    width: 40px;
-    height: 40px;
 }
 
 a {

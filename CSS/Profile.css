@@ -5,18 +5,6 @@ body {
     margin:0 auto;
 }
 
-
-body img{
-    margin-top: 30px;
-    max-width: 300px;
-}
-
-.MainContent img{
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-}
-
 .lvl{
     margin-top: -20px;
 }
@@ -69,20 +57,4 @@ button{
 
 button:hover{
     cursor: pointer;
-}
-
-footer{
-    margin-top: -20px;
-    float: bottom;
-}
-
-footer ul{
-    display: flex;
-    gap: 15%;
-    list-style-type: none;
-}
-
-ul img{
-    width: 40px;
-    height: 40px;
 }
