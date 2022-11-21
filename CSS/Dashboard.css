@@ -1,12 +1,7 @@
-/* * {
-    overflow: hidden;
-} */
-
 body {
     width: 400px;
     height: 600px;
     font-family: 'Lekton', sans-serif;
-    overflow-y: hidden;
     margin: 0 auto;
     background-color: grey;
 }
@@ -28,7 +23,7 @@ canvas {
 }
 
 .MainContent {
-    overflow: hidden;
+    overflow-y: hidden;
     /* border-radius: 30px; */
     /* background-color: gray; */
 }
@@ -109,8 +104,4 @@ a {
 
 a :hover {
     cursor: pointer;
-}
-
-.footer{
-    height: 200px;
 }
