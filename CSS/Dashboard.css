@@ -1,25 +1,64 @@
+/* * {
+    overflow: hidden;
+} */
+
 body {
     width: 400px;
     height: 600px;
     font-family: 'Lekton', sans-serif;
     overflow-y: hidden;
     margin: 0 auto;
-    overflow: hidden;
+    background-color: grey;
 }
 
-model-viewer{
-    width:100%;
+model-viewer {
+    width: 100%;
     height: 160px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 h3 {
     margin-top: -15px;
-    color: gold;
+    color: white;
     font-size: 40px;
 }
 
-.lvl{
+canvas {
+    margin-top: -30px;
+}
+
+.MainContent {
+    overflow: hidden;
+    /* border-radius: 30px; */
+    /* background-color: gray; */
+}
+
+.headModelContent {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 10px 0 10px 0;
+}
+
+
+/* .canvas {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 10px 0 10px 0;
+} */
+
+#doggoContainer {
+    transform-origin: 50% 50% 150px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
+}
+
+.lvl {
     margin-top: -10px;
 }
 
@@ -34,6 +73,12 @@ h3 {
     text-align: left;
 }
 
+li {
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+}
+
 .points ul {
     margin-top: 23px;
     list-style-type: none;
@@ -45,8 +90,9 @@ h3 {
 button {
     width: 346px;
     height: 48px;
-    background: #0066FF;
-    color: white;
+    /* background: #0066FF; */
+    background: white;
+    border-color: gray;
     font-size: 19px;
     border-radius: 55px;
     margin-top: 20px;
@@ -57,7 +103,13 @@ button :hover {
 }
 
 footer {
-    float: bottom;
+    /* margin: 10px 30px; */
+    /* padding: 0px; */
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: white;
 }
 
 footer ul {
