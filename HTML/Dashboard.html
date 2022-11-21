@@ -16,6 +16,13 @@
     <!-- THREE.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+    <script>  
+        $(function(){ 
+        $("#header").load("header.html");  
+        $("#footer").load("Footer.html");  
+        }); 
+    </script> 
 </head>
 
 <body>
@@ -58,25 +65,10 @@
         </center>
     </div>
 </body>
+<div class="footer" id="footer"></div>
 
 <script src="/JS/Dashboard.js" type="module"></script>
 <script src="/JS/AuthStateController.js" type="module"></script>
 
-<footer>
-    <ul>
-        <li>
-            <a class="active" href="#"><img src="/Images/icons8-home-page-100.png" class=""></a>
-        </li>
-        <li>
-            <a href="/HTML/Leaderboard.html"><img src="/Images/icons8-trophy-96.png" class=""></a>
-        </li>
-        <li>
-            <a href="/HTML/Profile.html"><img src="/Images/icons8-user-100.png" class=""></a>
-        </li>
-        <li>
-            <a href="/HTML/Teams.html"><img src="/Images/icons8-people-80.png" class=""></a>
-        </li>
-    </ul>
-</footer>
 
 </html>

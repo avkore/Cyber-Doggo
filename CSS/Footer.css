@@ -1,0 +1,16 @@
+footer {
+    background-color: #d5691d;
+    height: 100%;
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    gap: 15%;
+    list-style-type: none;
+}
+
+ul img {
+    width: 40px;
+    height: 40px;
+}

@@ -11,6 +11,6 @@
         "default_popup": "HTML/Dashboard.html"
     },
     "permissions": ["activeTab", "tabs", "webNavigation"],
-    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/gh/mrdoob/three.js@master/examples/js/loaders/GLTFLoader.js https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js https://www.googleapis.com/ https://*.firebaseio.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://code.jquery.com/jquery-1.10.2.js https://cdn.jsdelivr.net/gh/mrdoob/three.js@master/examples/js/loaders/GLTFLoader.js https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js https://www.googleapis.com/ https://*.firebaseio.com; object-src 'self'"
 
 }
