@@ -41,6 +41,10 @@ body {
     transition: all 0.5s ease-out;
 }
 
+.lvl{
+    color: white;
+}
+
 h3 {
     margin-top: -15px;
     color: Gold;
@@ -48,7 +52,7 @@ h3 {
 }
 
 .missionsdiv {
-    margin-top: -75px;
+    margin-top: -55px;
     font-size: 15px;
     display: flex;
 }
@@ -64,23 +68,26 @@ li {
     font-weight: bold;
 }
 
-.points ul {
-    margin-top: 23px;
+.points ul{
+    position: relative;
+    right: 20px;
     list-style-type: none;
-    margin-right: 10px;
-    max-height: 15px;
-    line-height: 70%;
+}
+
+.points ul p{
+   color: black;
+   margin: 0;
 }
 
 button {
     width: 346px;
     height: 48px;
-    /* background: #0066FF; */
     background: white;
-    border-color: gray;
+    border: 3px solid white;
     font-size: 19px;
     border-radius: 55px;
-    /* margin-top: 20px; */
+    background-color: rgb(255, 153, 0);
+    color: white;
 }
 
 button :hover {
