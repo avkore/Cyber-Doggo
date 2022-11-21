@@ -13,8 +13,7 @@ body {
 
 .MainContent {
     overflow-y: hidden;
-    /* border-radius: 30px; */
-    /* background-color: gray; */
+    height: 85vh;
 }
 
 .headModelContent {
