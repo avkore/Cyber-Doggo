@@ -6,16 +6,24 @@ body {
     margin:0 auto;
 }
 
-
-body img{
-    margin-top: 20px;
-    max-width: 300px;
+.MainContent {
+    overflow-y: hidden;
+    /* border-radius: 30px; */
+    /* background-color: gray; */
 }
 
-.MainContent img{
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+.headModelContent {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 10px 0 10px 0;
+}
+
+#doggoContainer {
+    transform-origin: 50% 50% 150px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
 }
 
 .MainContent input{
